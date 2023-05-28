@@ -1,0 +1,488 @@
+@import 'https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&display=swap';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: oxanium, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+    background: unset;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(#e027ff, #c534ff, #a93eff, #8a44ff, #6560ff);
+    border-radius: 20px;
+    border: unset;
+}
+
+.header-container {
+    width: 1450px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background: #0c0c35;
+    box-shadow: 0 2px 14px #0909a5c7;
+    color: #fff;
+    z-index: 100;
+}
+.header::after {
+    position: absolute;
+    right: 0;
+    bottom: -18px;
+    content: '';
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
+    width: 175px;
+    height: 18px;
+    background: #0c0c35;
+}
+.header::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -18px;
+    clip-path: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
+    width: 175px;
+    height: 18px;
+    background: #0c0c35;
+}
+
+.header-wrapper {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu ul li {
+    list-style: none;
+    padding: 4px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.menu ul li:hover {
+    background-color: #333333;
+}
+
+.header-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-action .search {
+    padding: 0 16px;
+    height: 45px;
+    border-radius: 16px;
+    background: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-action .search svg {
+    width: 24px;
+    height: 24px;
+}
+.header-action .search svg path {
+    fill: #fff;
+}
+
+.header-action .search input {
+    width: 0;
+    outline: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    transition: 0.7s width ease-in-out;
+}
+
+.header-action .search:hover input {
+    transition: 0.7s width ease-in-out;
+    width: 180px;
+    padding-left: 8px;
+}
+
+.btn {
+    margin-left: 12px;
+    background-image: linear-gradient(
+        to right bottom,
+        #f90cff,
+        #e027ff,
+        #c534ff,
+        #a93eff,
+        #8a44ff,
+        #6560ff,
+        #3c73ff,
+        #0081ff,
+        #009cff,
+        #00b3ff,
+        #00c6f5,
+        #0cd7e8
+    );
+    clip-path: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
+    width: 220px;
+    height: 50px;
+    overflow: hidden;
+    transition: all ease 700ms;
+    border-radius: 2px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.btn p {
+    font-size: 18px;
+}
+
+.btn span {
+    background: #9841ff none repeat scroll 0 0;
+    border-radius: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease 0s, height 0.6s ease 0s;
+    z-index: -1;
+}
+
+.btn:hover span {
+    height: 550px;
+    width: 550px;
+}
+
+/* end header */
+
+/* start banner */
+
+.banner {
+    padding-top: 80px;
+    width: 100%;
+    background-image: url(./images/1.jpg);
+}
+
+.banner-wrapper {
+    width: 100%;
+    height: 800px;
+    border-left: 1px solid #a3a3a3;
+    border-right: 1px solid #a3a3a3;
+    background-color: #0a0a0a3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner-wrapper h2 {
+    font-size: 36px;
+    color: #3c73ff;
+}
+
+.banner-wrapper h3 {
+    font-size: 78px;
+    color: #fff;
+}
+
+/* end banner */
+
+/* start blog */
+
+.blog {
+    width: 100%;
+}
+
+.blog-wrapper {
+    width: 100%;
+    border-left: 1px solid #a3a3a3;
+    padding: 50px 0;
+}
+
+.blog-wrapper__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-wrapper__head .title {
+    width: fit-content;
+}
+
+.blog-wrapper__head .title h2 {
+    font-size: 74px;
+    color: #f90cff;
+}
+
+.blog-wrapper__head .link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #3c73ff;
+    display: flex;
+    align-items: center;
+}
+.blog-wrapper__head .link svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+    transition: 0.7s ease-in-out;
+}
+
+.blog-wrapper__head .link:hover {
+    color: #8a44ff;
+}
+
+.blog-wrapper__body {
+    padding-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.blog-card {
+    position: relative;
+    overflow: hidden;
+    width: 380px;
+}
+
+.blog-card img {
+    width: 380px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 90% 0, 100% 22%, 100% 100%, 0 100%);
+}
+
+.blog-card::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -120%;
+    width: 400px;
+    height: 200px;
+    background: #a83eff6e;
+    transition: 0.7s left ease-in-out;
+    clip-path: polygon(0% 0%, 90% 0, 100% 22%, 100% 100%, 0 100%);
+}
+.blog-card:hover::after {
+    left: -20px;
+}
+
+.info {
+    padding: 12px 0;
+}
+
+.info .info-date {
+    display: flex;
+}
+
+.info .info-date p:last-child {
+    font-size: 14px;
+    font-weight: bold;
+    color: #009cff;
+}
+.info .info-date p:first-child {
+    font-size: 14px;
+    font-weight: bold;
+    color: #8a44ff;
+    padding-right: 24px;
+}
+
+.info .description {
+    padding-top: 12px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #8a44ff;
+    transition: 0.7s ease-in-out;
+}
+.info .description:hover {
+    color: #009cff;
+}
+/* end blog */
+
+/* start episod */
+
+.episod {
+    width: 100%;
+    height: 550px;
+    background: #9841ff;
+    background: url(./images/c3.jpg);
+    background-repeat: no-repeat; 
+}
+
+.episod-wrapper {
+    position: relative;
+    padding: 50px 0;
+    display: flex;
+}
+
+.episod-wrapper .btn {
+    border: none;
+}
+
+.episod-wrapper .btn span {
+    background: #0081ff none repeat scroll 0 0;
+}
+
+.episod-wrapper .box-bg {
+    width: 100%;
+}
+
+.episod-wrapper .box-bg img {
+    width: 100%;
+    position: absolute;
+    top: -25%;
+    left: 10px;
+}
+
+.episod-wrapper .box-info {
+    padding-top: 120px;
+}
+
+.episod-wrapper .box-info h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.episod-wrapper .box-info h2 {
+    padding: 24px 0;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.episod-wrapper .box-info .btn {
+    margin-left: unset;
+}
+
+/* end episod */
+
+/* game-overview */
+.game-overview {
+    width: 100%;
+    /* background: url(./body-bg.jpg); */
+}
+.overview-wrapper {
+    padding: 50px 0;
+    height: 750px;
+}
+
+.overview-head {
+    padding-bottom: 44px;
+}
+
+.overview-head h4 {
+    border-top: 1px solid #009cff;
+    font-size: 5rem; 
+    font-weight: bold;
+}
+
+.overview-body {
+    display: flex;
+    justify-content: space-between;  
+}
+
+.overview-body .ov-info {
+    width: 50%;
+}
+.overview-body .ov-info .btn {
+    margin-left: unset;
+    margin-top: 24px;
+}
+
+.overview-body .ov-info h1 {
+    color: #f90cff;
+    padding: 24px 0;
+}
+
+.overview-body .ov-video {
+    height: 350px;
+}
+.overview-body .ov-video img {
+    width: 100%;
+}
+.footer {
+    width: 100%;
+    background: #0c0c35;
+}
+
+.footer-wrapper {
+    padding: 24px 0;
+    color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.agents {
+    width: 100%;
+    background: #9841ff;
+}
+
+.agents-wrapper {
+    padding: 100px 0 150px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid #a3a3a3;
+}
+
+.agents-wrapper .ag-info {
+    width: 50%;
+}
+
+.agents-wrapper .ag-info .btn {
+    margin: 0;
+    width: 270px;
+    margin-top: 24px;
+}
+.agents-wrapper .ag-info .btn p {
+    font-size: 16px;
+}
+
+.agents-wrapper .ag-info .btn span {
+    background: #0081ff none repeat scroll 0 0;
+}
+
+.agents-wrapper .ag-info h2 {
+    font-size: 76px;
+    font-weight: bold;
+    color: #fff;
+    padding: 26px 0;
+}
+
+.agents-wrapper .ag-info h4 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    padding: 22px 0;
+}
+
+.agents-wrapper .ag-info p {
+    font-size: 16px;
+    font-weight: bold;
+}
